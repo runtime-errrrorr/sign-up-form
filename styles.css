@@ -81,7 +81,7 @@ body{
   width: 65%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   background-color: #F6F5F5;
   
 }
@@ -94,12 +94,15 @@ body{
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .form-container{
   box-shadow:5px 5px 10px rgba(0, 0, 0, 0.15);
   background-color: white;
   padding:10px 35px;
+  padding-bottom: 30px;
   font-family: "Source Sans 3";
   font-size: 12px;
   letter-spacing: 1px;
@@ -111,9 +114,70 @@ form{
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-size: smaller;
 }
 
 .form-header{
   font-size: 25px;
 }
 
+.name,.contact,.password{
+  display: flex;
+  gap: 60px;
+}
+.form-group{
+  display: flex;
+  flex-direction: column;
+
+}
+
+input{
+  border: 2px solid #e5e7ebe4;
+  border-radius: 4px;
+  padding: 3px;
+}
+input:focus{
+  outline: none;
+}
+input:valid{
+  border:2px solid rgb(166, 243, 166)
+}
+input:invalid:not(:placeholder-shown){
+
+  border: 2px solid lightcoral
+} 
+
+input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* For Firefox */
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+button[type='submit']{
+  background-color: #596D48;
+  border-radius: 4px;
+  padding: 10px;
+  width: 180px;
+  border: none;
+  color: white;
+  font-size: medium;
+  transition: background-color 0.3s ease;
+}
+
+button[type='submit']:hover{
+  background-color: #49583b;
+}
+
+
+a{
+  color: #596D48;
+}
+
+.submit{
+  padding: 10px 35px;
+}
